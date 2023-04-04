@@ -23,23 +23,15 @@ header#title {
 
 .title-content {
 	max-height: 50px;
-	max-width: 400px;
-	min-width: 300px;
+	width: 400px;
 	margin-top: auto;
 	margin-bottom: auto;
 	display: inline-block;
 	font-weight: 700;
+	text-align: center;
 }
 
-#title > div.title-content {
-	font-weight: 200;
-}
-
-.text-content {
-	background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-	height: calc(100vh - 107px);
-}
-div.skills {
+.skills {
 	background-color: #f9cb6a;
 	color: #19192e;
 	text-align:center;
@@ -48,9 +40,15 @@ div.skills {
 	font-size: 20px;
 }
 
+.skills > span {
+	transition: 0.5s;
+}
+
+.skill-icon::before {
+	color: black;
+}
+
 div.skills > span:hover {
-	animation-duration: 2s;
-	animation-delay: 1s;
 	font-size: 21px;
 	background-color: #f3bf4e;
 }
@@ -77,6 +75,58 @@ p#resumen {
 	padding: 10px;
 }
 
+.text-content {
+	/* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+	height: calc(100vh - 107px);
+	background-color: #19192e;
+}
+
+.light-hr {
+	width: 90%;
+	height: 1px;
+	margin-top: auto;
+	margin-bottom: auto;
+	background-color: #8b949e;
+	border: none;
+}
+
+.content-body {
+	display: none;
+	margin: 5px;
+}
+
+.card-container {
+	display: inline-block;
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid #7b7c7c;
+	border-radius: 30px;
+	text-align: justify;
+	justify-content: center;
+	align-items: center;
+}
+
+.circle-img {
+	border: 1px solid #000;
+	border-radius:150px;
+	margin: auto;
+}
+
+div > aside#aboutme {
+	width: 30%;
+	height: 100%;
+}
+
+#aboutme {
+	display: inline-block;
+}
+
+div > div#aboutme {
+	display: inline-block;
+	width: 70%;
+	height: 100%;
+}
+
 .sidenav {
 	height: 100%;
 	width: 0;
@@ -84,17 +134,14 @@ p#resumen {
 	z-index: 1;
 	top:0;
 	left: 0;
-	left: 0;
-	background-color: #19192e;
+	background-color: #17172b;
 	overflow-x: hidden;
 	padding-top: 60px;
 	transition: 0.5s;
-	
+	box-shadow: 4px -3px 12px 2px #090911;
 }
 
-
 /* los links de navegacion */
-
 .sidenav a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
@@ -109,7 +156,6 @@ p#resumen {
 }
 
 /* posicion y estilo al boton de cierre */
-
 .sidenav .closebtn {
 	position: absolute;
 	top: 0;
@@ -118,19 +164,34 @@ p#resumen {
 	margin-left: 50px;
 }
 
-/* stilo del contenido de la pagina */
+.closebtn:hover {
+	cursor: pointer;
+}
 
-/*
+/* stilo del contenido de la pagina */
 #main {
 	transition: margin-left .5s;
 	padding: 20px;
 }
 
-*/
 /* para pantallas mas pequñas cuando la altura es menos de 450px , cambiar el stilo de la barra lateral (menos el relleno y el tamaño de fuente mas pequeño) */
 @media screen and (max-height:450px){
 	.sidenav { padding-top: 15px; }
 	.sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width:450px) {
+	.title-content {
+		max-width: 250px;
+		min-width: 200px;
+		font-size: 20px;
+		padding: 5px;
+	}
+	.skills {
+		padding: 3px;
+		/* font-weight: 550; */
+		font-size: 15px;
+	}
 }
 	
 	

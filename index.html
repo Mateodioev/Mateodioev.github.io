@@ -27,12 +27,12 @@
 
 	<div class="skills">
 		<!-- alinea el texto en el centro -->
-		<span class="fa-brands fa-html5"> HTML</span> - 
-		<span class="fa-brands fa-js"> JS</span> - 
-		<span class="fa-brands fa-css3"> CSS</span> - 
-		<span class="fa-brands fa-php"> PHP</span> - 
-		<span class="fa-brands fa-golang"> GOLANG</span> - 
-		<span class="fa-brands fa-github"><a id="github-link" href="https://github.com/Mateodioev" target="_blank">Github</a></span>
+		<span class="skill-icon fa-brands fa-html5"> HTML</span> - 
+		<span class="skill-icon fa-brands fa-js"> JS</span> - 
+		<span class="skill-icon fa-brands fa-css3"> CSS</span> - 
+		<span class="skill-icon fa-brands fa-php"> PHP</span> - 
+		<span class="skill-icon fa-brands fa-golang"> GOLANG</span> - 
+		<span class="skill-icon fa-brands fa-github"><a id="github-link" href="https://github.com/Mateodioev" target="_blank">Github</a></span>
 	</div>
 
 	<div class="text-content">
@@ -41,30 +41,47 @@
 			<a href="#aboutme">Sobre mi</a>
 			<a href="#exp">Experiencia</a>
 			<a href="#proyects">Proyectos</a>
-			<a href="#">...</a>
+			<a href="#proyects">Contactame</a>
 		</div>
 		<span style="font-size: 30px; cursor: pointer;" onclick="openNav()">&#9776</span>
 
-		<p id="resumen">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-	
 		<section class="content">
-			<div style="width: 960px;margin-right: auto;margin-left: auto;">
-				<div>
-					<h3 style="font-size: 36px;">Education</h3>
+			<div class="content-body" id="aboutme">
+				<aside class="card-container" id="aboutme">
+					<center>
+						<img src="https://avatars.githubusercontent.com/u/68271130?v=4" style="height: auto;" alt="Mateodioev github profile" width="200" height="200" class="circle-img">
+					</center>
+					<br>
+					<h2 style="text-align: center;padding-bottom: 10px;">Mateo Ore</h2>
+					<hr class="light-hr">
+					<p style="padding: 15px;">Descripcion. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid praesentium odit, commodi facere, saepe ducimus officia laborum cum rerum eum accusamus totam iusto possimus? Enim deserunt doloremque consequuntur rerum natus.</p>
+					<hr class="light-hr">
+					<h3 style="text-align: center;padding-top: 15px;">Datos</h3>
+					<ul style="padding-left: 15px;padding-right: 15px;">
+						<li><span style="font-weight: 600;">Edad:</span> 18 años</li>
+						<li><span style="font-weight: 600;">Residencia:</span> Peru</li>
+						<li></li>
+					</ul>
+				</aside>
+
+				<div class="card-container" id="aboutme">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolorem quis commodi quisquam laborum ducimus expedita, ipsum accusamus laboriosam. Maiores id aliquid in similique. Ipsum nobis accusantium rem quas dolorum!
 				</div>
+			</div>
+			<div class="content-body" id="exp">
+				Experiencia
+			</div>
+			<div class="content-body" id="proyects">
+				Proyectos
+			</div>
+			<div class="content-body" id="contactme">
+				Contactame
 			</div>
 		</section>
 
 	</div>
 
-	<script src="static/js/barra.js"></script>
+	<script src="static/js/main.js"></script>
 	<script src="https://kit.fontawesome.com/ef0860d74a.js" crossorigin="anonymous"></script>
 </body>
 </html>
