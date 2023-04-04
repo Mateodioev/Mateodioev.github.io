@@ -1,0 +1,136 @@
+@font-face {
+	font-family: 'Fira Code';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/firacode/v21/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_D1sJVD7Ng.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+header#title {
+	background-color: #19192e;
+	color: #f9cb6a;
+	text-align: center;
+	padding: 10px;
+	font-family: 'Fira Code';
+	font-size: 30px;
+	height: 50px;
+}
+
+.title-content {
+	max-height: 50px;
+	max-width: 400px;
+	min-width: 300px;
+	margin-top: auto;
+	margin-bottom: auto;
+	display: inline-block;
+	font-weight: 700;
+}
+
+#title > div.title-content {
+	font-weight: 200;
+}
+
+.text-content {
+	background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+	height: calc(100vh - 107px);
+}
+div.skills {
+	background-color: #f9cb6a;
+	color: #19192e;
+	text-align:center;
+	padding: 7px;
+	font-weight: 550;
+	font-size: 20px;
+}
+
+div.skills > span:hover {
+	animation-duration: 2s;
+	animation-delay: 1s;
+	font-size: 21px;
+	background-color: #f3bf4e;
+}
+
+#github-link:link {
+	text-decoration: none;
+}
+#github-link:visited {
+	text-decoration: none;
+}
+#github-link:hover {
+	text-decoration: none;
+}
+#github-link:active {
+	text-decoration: none;
+}
+
+p#resumen {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: justify;
+	font-style: oblique;
+	padding: 10px;
+}
+
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top:0;
+	left: 0;
+	left: 0;
+	background-color: #19192e;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.5s;
+	
+}
+
+
+/* los links de navegacion */
+
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav a:hover {
+	color: #f9cb6a;
+}
+
+/* posicion y estilo al boton de cierre */
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+/* stilo del contenido de la pagina */
+
+/*
+#main {
+	transition: margin-left .5s;
+	padding: 20px;
+}
+
+*/
+/* para pantallas mas pequñas cuando la altura es menos de 450px , cambiar el stilo de la barra lateral (menos el relleno y el tamaño de fuente mas pequeño) */
+@media screen and (max-height:450px){
+	.sidenav { padding-top: 15px; }
+	.sidenav a {font-size: 18px;}
+}
+	
+	
