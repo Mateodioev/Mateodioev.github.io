@@ -1,0 +1,73 @@
+.skill-bar {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.progress-bar {
+    color: #f6fcff;
+    position: relative;
+    height: 20px;
+    width: 70%;
+    background: #e9cc8d;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.progress-bar-fill {
+    position: absolute;
+    background: #17172cce;
+    height: 20px;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    text-transform: uppercase;
+    animation: animate 1s 1s cubic-bezier(0.6, 0.32, 0.77, 0.58) forwards;
+    box-shadow: inset 6px -4px 7px 4px #090911;
+}
+
+.progress-bar-text {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* Lenguajes */
+
+.progress-bar .php {
+    width: 80%;
+}
+
+.progress-bar .golang {
+    width: 50%;
+}
+
+.progress-bar .python {
+    width: 50%;
+}
+
+.progress-bar .java {
+    width: 50%;
+}
+
+.progress-bar .html {
+    width: 30%;
+}
+
+.progress-bar .javascript {
+    width: 30%;
+}
+
+.progress-bar .css {
+    width: 30%;
+}
