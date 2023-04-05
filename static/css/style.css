@@ -84,11 +84,22 @@ p#resumen {
 	background-color: #19192e;
 }
 
-h2 {
+h1, h2, h3, h4, h5, h6 {
+	color: #cac9c9;
 	font-style: italic;
-	font-size: large;
 	text-decoration: underline;
 }
+
+h2 { font-size: large; }
+
+p {
+	color: #afafaf;
+}
+
+li {
+	color: rgb(224, 217, 209);
+}
+
 /* linea horizontal */
 .light-hr {
 	width: 90%;
@@ -128,6 +139,22 @@ h2 {
 .github-card {
 	width: 250px;
 	min-height: 100px;
+}
+
+.github-card > h2 {
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.github-card > span {
+	font-style: oblique;
+	text-align: justify;
+	color: #cac9c9;
+}
+
+/* Center icons */
+.github-card > span > span > span {
+	text-align: center;
 }
 
 #dev-info {
@@ -185,9 +212,20 @@ h2 {
 	cursor: pointer;
 }
 
+.openbtn {
+	font-size: 50px;
+	cursor: pointer;
+	color: #9b9b9b;
+}
+
+.openbtn:hover {
+	color: #f9cb6a;
+}
+
 .progress-bar-fill:hover {
 	box-shadow: 3px 7px 10px 1px #6262db;
 }
+
 /* para pantallas mas pequñas cuando la altura es menos de 450px , cambiar el stilo de la barra lateral (menos el relleno y el tamaño de fuente mas pequeño) */
 @media screen and (max-height:450px){
 	.sidenav { padding-top: 15px; }
