@@ -61,7 +61,6 @@ function createRepoTitle(repoData) {
 	const h2title = document.createElement('h2');
 	const repoLink = document.createElement('a');
 
-	h2title.style = "text-align: center;padding-bottom: 10px;";
 	repoLink.href = repoData.url;
 	repoLink.textContent = repoData.full_name;
     repoLink.target = "_blank";
@@ -80,7 +79,6 @@ function createRepoHr() {
 function createRepoDescription(repoData) {
 	const span = document.createElement('span');
 	span.textContent = "\"" + (repoData.description ?? "No hay descripcion") + "\"";
-	span.style = "font-style: oblique;text-align: center;";
 
     span.appendChild(createBr());
     span.appendChild(createRepoLangs(repoData));
