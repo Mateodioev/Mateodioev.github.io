@@ -18,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="static/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="static/css/style.css">
 	<link rel="stylesheet" type="text/css" href="static/css/progressbar.css">
+	<link rel="stylesheet" type="text/css" href="static/css/form.css">
 </head>
 <body>
 	<header id="title">
@@ -111,6 +112,7 @@
 				<!-- Relleno -->
 				<br><br><br><br><br><br><br><br><br><br><br><br><br>
 				<br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br>
 			</div>
 			<div class="content-body" id="proyects">
 				<div id="github-repos">
@@ -118,12 +120,69 @@
 				</div>
 			</div>
 			<div class="content-body" id="contactme">
-				<form action="#nothingToDo" method="get">
-					<input type="text" name="nombre" id="form-name" autocomplete="name">
-					<input type="email" name="email" id="form-email" autocomplete="email">
-					<textarea name="message" id="form-message" cols="30" rows="10"></textarea>
-					<input type="button" value="submmit">
-				</form>
+				<div class="redes-sociales">
+					<ul class="red-so-icon">
+						<li class="fa-brands fa-facebook" style="color: #f5f5f5;"><a href="#"></li>
+						<li class="fa-brands fa-twitter" style="color: #f5f5f5;"><a href="#"></li>
+						<li class="fa-brands fa-telegram" style="color: #f5f5f5;"><a href="#"></li>
+						<li class="fa-brands fa-github" style="color: #f5f5f5;"><a href="#"></li>
+					</ul>
+				</div>
+				<div class="formbold-main-wrapper">
+					<!-- Author: FormBold Team -->
+					<!-- Learn More: https://formbold.com -->
+					<div class="formbold-form-wrapper">
+					  <form action="https://formbold.com/s/FORM_ID" method="POST">
+						<div class="formbold-mb-5">
+						  <label for="name" class="formbold-form-label"> Full Name </label>
+						  <input
+							type="text"
+							name="name"
+							id="name"
+							placeholder="Full Name"
+							class="formbold-form-input"
+						  />
+						</div>
+				  
+						<div class="formbold-mb-5">
+						  <label for="email" class="formbold-form-label"> Email Address </label>
+						  <input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="Enter your email"
+							class="formbold-form-input"
+						  />
+						</div>
+				  
+						<div class="formbold-mb-5">
+						  <label for="subject" class="formbold-form-label"> Subject </label>
+						  <input
+							type="text"
+							name="subject"
+							id="subject"
+							placeholder="Enter your subject"
+							class="formbold-form-input"
+						  />
+						</div>
+				  
+						<div class="formbold-mb-5">
+						  <label for="message" class="formbold-form-label"> Message </label>
+						  <textarea
+							rows="6"
+							name="message"
+							id="message"
+							placeholder="Type your message"
+							class="formbold-form-input"
+						  ></textarea>
+						</div>
+				  
+						<div>
+						  <button class="formbold-btn">Submit</button>
+						</div>
+					  </form>
+					</div>
+				  </div>
 			</div>
 		</section>
 
