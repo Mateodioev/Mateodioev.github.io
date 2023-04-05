@@ -125,6 +125,11 @@ h2 {
 	align-items: center;
 }
 
+.github-card {
+	width: 250px;
+	min-height: 100px;
+}
+
 #dev-info {
 	width: 30%;
 }
@@ -200,6 +205,10 @@ h2 {
 		padding: 3px;
 		/* font-weight: 550; */
 		font-size: 15px;
+	}
+	.github-card {
+		min-width: 350px;
+		max-width: 300px;
 	}
 }
 
