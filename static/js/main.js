@@ -1,3 +1,9 @@
+// window.addEventListener("")
+
+window.addEventListener("load", function(event) {
+	viewAboutme();
+});
+
 function openNav(){
 	document.getElementById("mySidenav").style.width="250px";
 }
@@ -14,7 +20,7 @@ function viewAboutme() {
 	hideContactme();
 }
 
-function hideAboutme() { document.getElementById('aboutme').style.display = "none";}
+const hideAboutme = () => document.getElementById('aboutme').style.display = "none";
 
 function viewExp() {
 	document.getElementById('exp').style.display = "inline-block";
@@ -23,7 +29,7 @@ function viewExp() {
 	hideContactme();
 }
 
-function hideExp() { document.getElementById('exp').style.display = "none"; }
+const hideExp = () => document.getElementById('exp').style.display = "none";
 
 function viewProyects() {
 	document.getElementById('proyects').style.display = "inline-block";
@@ -32,7 +38,7 @@ function viewProyects() {
 	hideContactme();
 }
 
-function hideProyects() { document.getElementById('proyects').style.display = "none"; }
+const hideProyects = () => document.getElementById('proyects').style.display = "none";
 
 function viewContactme() {
 	document.getElementById('contactme').style.display = "inline-block";
@@ -41,4 +47,4 @@ function viewContactme() {
 	hideProyects();
 }
 
-function hideContactme() { document.getElementById('contactme').style.display = "none"; }
+const hideContactme = () => document.getElementById('contactme').style.display = "none";
