@@ -139,6 +139,7 @@ li {
 .github-card {
 	width: 250px;
 	min-height: 100px;
+	background-color: #a1a1a1;
 }
 
 .github-card > h2 {
@@ -226,8 +227,15 @@ li {
 	box-shadow: 3px 7px 10px 1px #6262db;
 }
 
+/* Vistas a pantalla completa en pc */
+@media screen and (min-width:1550px) {
+	.text-content {
+		height: calc(100vh - 104px);
+	}
+}
+
 /* para pantallas mas pequñas cuando la altura es menos de 450px , cambiar el stilo de la barra lateral (menos el relleno y el tamaño de fuente mas pequeño) */
-@media screen and (max-height:450px){
+@media screen and (max-height:450px) {
 	.sidenav { padding-top: 15px; }
 	.sidenav a {font-size: 18px;}
 }
