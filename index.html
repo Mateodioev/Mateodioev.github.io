@@ -46,7 +46,7 @@
 		<span style="font-size: 30px; cursor: pointer;" onclick="openNav()">&#9776</span>
 
 		<section class="content">
-			<div class="content-body" id="aboutme">
+			<div class="content-body dev-info">
 				<aside class="card-container" id="aboutme">
 					<center>
 						<img src="https://avatars.githubusercontent.com/u/68271130?v=4" style="height: auto;" alt="Mateodioev github profile" width="200" height="200" class="circle-img">
@@ -70,13 +70,18 @@
 			</div>
 
 			<div class="content-body" id="exp">
-				Experiencia
+				Nada todavia
 			</div>
 			<div class="content-body" id="proyects">
 				Proyectos
 			</div>
 			<div class="content-body" id="contactme">
-				Contactame
+				<form action="?nothingToDo" method="get">
+					<input type="text" name="nombre" id="form-name" autocomplete="name">
+					<input type="email" name="email" id="form-email" autocomplete="email">
+					<textarea name="message" id="form-message" cols="30" rows="10"></textarea>
+					<input type="button" value="submmit">
+				</form>
 			</div>
 		</section>
 
