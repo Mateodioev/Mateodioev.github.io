@@ -11,6 +11,8 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 }
 
+/* header and skills */
+
 header#title {
 	background-color: #19192e;
 	color: #f9cb6a;
@@ -53,16 +55,16 @@ div.skills > span:hover {
 	background-color: #f3bf4e;
 }
 
-#github-link:link {
+:link {
 	text-decoration: none;
 }
-#github-link:visited {
+:visited {
 	text-decoration: none;
 }
-#github-link:hover {
+:hover {
 	text-decoration: none;
 }
-#github-link:active {
+:active {
 	text-decoration: none;
 }
 
@@ -75,12 +77,19 @@ p#resumen {
 	padding: 10px;
 }
 
+/* Secciones */
 .text-content {
-	/* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
-	height: calc(100vh - 107px);
+	/* Fondo de todo */
+	/* height: calc(100vh - 107px); */
 	background-color: #19192e;
 }
 
+h2 {
+	font-style: italic;
+	font-size: large;
+	text-decoration: underline;
+}
+/* linea horizontal */
 .light-hr {
 	width: 90%;
 	height: 1px;
@@ -90,15 +99,25 @@ p#resumen {
 	border: none;
 }
 
-.content-body {
+/* imagen redonda */
+.circle-img {
+	border: 1px solid #000;
+	border-radius:150px;
+	margin: auto;
+}
+
+/* pages selector */
+.content > div {
 	display: none;
 	margin: 5px;
 }
 
+/* cards */
 .card-container {
+	max-width: 100%;
 	display: inline-block;
 	margin: 10px;
-	padding: 5px;
+	padding: 15px;
 	border: 1px solid #7b7c7c;
 	border-radius: 30px;
 	text-align: justify;
@@ -106,32 +125,20 @@ p#resumen {
 	align-items: center;
 }
 
-.circle-img {
-	border: 1px solid #000;
-	border-radius:150px;
-	margin: auto;
-}
-
-div > aside#aboutme {
+#dev-info {
 	width: 30%;
-	height: 100%;
 }
 
-
-div > div#aboutme {
-	display: inline-block;
-	width: 70%;
-	height: 100%;
+#dev-description {
+	width: 60%;
 }
 
-#contactme {
-	max-width:400px;
-	width: 100%;
-	margin: 0 auto;
-	position: relative;
-	text-align: center;
-	padding: 0 auto;
+#list-formacion {
+	padding-left: 20px;
+	list-style: circle;
 }
+
+/* Navbar */
 .sidenav {
 	height: 100%;
 	width: 0;
@@ -173,12 +180,9 @@ div > div#aboutme {
 	cursor: pointer;
 }
 
-/* stilo del contenido de la pagina */
-#main {
-	transition: margin-left .5s;
-	padding: 20px;
+.progress-bar-fill:hover {
+	box-shadow: 3px 7px 10px 1px #6262db;
 }
-
 /* para pantallas mas pequñas cuando la altura es menos de 450px , cambiar el stilo de la barra lateral (menos el relleno y el tamaño de fuente mas pequeño) */
 @media screen and (max-height:450px){
 	.sidenav { padding-top: 15px; }
@@ -199,8 +203,7 @@ div > div#aboutme {
 	}
 }
 
-.dev-info {
-	display: flex;
-	flex-direction: row;
-	gap: 20px;
+@media screen and (max-width:800px) {
+	#dev-info { width: 90%; }
+	#dev-description { width: 90%; }
 }
