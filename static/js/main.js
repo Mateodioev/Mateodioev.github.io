@@ -1,5 +1,5 @@
 // window.addEventListener("")
-const defaultPage = "contactme";
+const defaultPage = "aboutme";
 
 window.addEventListener("load", function(event) {
 	view(defaultPage);
