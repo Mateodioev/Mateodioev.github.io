@@ -178,6 +178,19 @@ li { color: rgb(224, 217, 209); }
 	justify-content: center;
 }
 
+.google-maps {
+	width: 100%;
+}
+
+.google-maps-content {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	align-items: center;
+	justify-content: center;
+}
+
 /* Navbar */
 .sidenav {
 	height: 100%;
