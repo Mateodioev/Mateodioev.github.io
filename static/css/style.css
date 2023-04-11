@@ -57,16 +57,16 @@ div.skills > span:hover {
 	background-color: #f3bf4e;
 }
 
-:link {
+a {
 	text-decoration: none;
+	color: inherit;
 }
-:visited {
-	text-decoration: none;
+
+a:hover {
+	color: -webkit-link;
 }
-:hover {
-	text-decoration: none;
-}
-:active {
+
+:link, :visited, :hover, :active {
 	text-decoration: none;
 }
 
@@ -119,10 +119,9 @@ li {
 	margin: auto;
 }
 
-/* pages selector */
+/* oculta las secciones por defecto */
 .content > div {
 	display: none;
-	margin: 5px;
 }
 
 /* cards */
@@ -171,6 +170,12 @@ li {
 #list-formacion {
 	padding-left: 20px;
 	list-style: circle;
+}
+
+.center-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Navbar */
@@ -235,6 +240,7 @@ li {
 	.sidenav a {font-size: 18px;}
 }
 
+/* Cuando el ancho es menor a 450px  */
 @media screen and (max-width:450px) {
 	.title-content {
 		max-width: 250px;
@@ -253,7 +259,16 @@ li {
 	}
 }
 
+/* Cuando el ancho es menor a 800px */
 @media screen and (max-width:800px) {
 	#dev-info { width: 90%; }
 	#dev-description { width: 90%; }
+
+	.formulario {
+		width: 90%;
+		margin:0, 0;
+	}
+	.forminput {
+		max-width: 500px;
+	}
 }

@@ -1,7 +1,8 @@
 // window.addEventListener("")
+const defaultPage = "contactme";
 
 window.addEventListener("load", function(event) {
-	viewAboutme();
+	view(defaultPage);
 });
 
 function openNav(){
@@ -11,6 +12,14 @@ function openNav(){
 function closeNav(){
 	document.getElementById("mySidenav").style.width="0";
 
+}
+
+function view(page) {
+	hideAboutme();
+	hideExp();
+	hideProyects();
+	hideContactme();
+	document.getElementById(page).style.display = "inline-block";
 }
 
 function viewAboutme() {
