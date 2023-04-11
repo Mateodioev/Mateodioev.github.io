@@ -86,6 +86,10 @@ p#resumen {
 	background-color: #19192e;
 }
 
+.content-body {
+	height: calc(100vh - 104px);
+}
+
 h1, h2, h3, h4, h5, h6 {
 	color: #cac9c9;
 	font-style: italic;
@@ -94,13 +98,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 { font-size: large; }
 
-p {
-	color: #afafaf;
-}
+p { color: #afafaf; }
 
-li {
-	color: rgb(224, 217, 209);
-}
+li { color: rgb(224, 217, 209); }
 
 /* linea horizontal */
 .light-hr {
@@ -256,6 +256,10 @@ li {
 	.github-card {
 		min-width: 350px;
 		max-width: 300px;
+	}
+	.content-body {
+		/* height: calc(100vh - 124px); */
+		height: 100%;
 	}
 }
 
