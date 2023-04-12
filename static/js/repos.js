@@ -10,6 +10,14 @@ const githubUsername = 'Mateodioev';
 // 		});
 // 	});
 
+getUsernames(githubUsername).then(repos => {
+	const repoList = document.getElementById('github-repos');
+
+	repos.forEach(repo => {
+		repoList.appendChild(parseRepo(repo));
+	})
+});
+
 async function getUsernames(username) {
 
 	try {
@@ -38,35 +46,27 @@ async function getUsernames(username) {
 	}
 }
 
-function addRepo(repoData, domElement) {
-	const repoContainer = createRepoContainer(repoData);
+function parseRepo(data) {
+	const container = document.createElement('div');
+	container.className = "slide";
 
-	repoContainer.appendChild(createRepoTitle(repoData));
-	repoContainer.appendChild(createRepoHr());
-	repoContainer.appendChild(createRepoDescription(repoData));
-    repoContainer.appendChild(createRepoHr());
-    repoContainer.appendChild(createRepoStats(repoData));
-	domElement.appendChild(repoContainer);
-}
+	container.appendChild(createRepoTitle(data));
+	container.appendChild(createRepoHr());
+	container.appendChild(createRepoDescription(data));
+	container.appendChild(createRepoHr());
+	container.appendChild(createRepoStats(data));
+	container.appendChild(createRepoHr());
+	container.appendChild(createRepoLink(data));
+	container.appendChild(createRepoHr());
 
-function createRepoContainer(repoData) {
-	const repoContainer = document.createElement('div');
-	repoContainer.className = "card-container github-card";
-
-	return repoContainer;
+	return container;
 }
 
 function createRepoTitle(repoData) {
-	// <h2 style="text-align: center;padding-bottom: 10px;"><a href="{repoData.url}">{repoData.full_name}</a></h2>
-	const h2title = document.createElement('h2');
-	const repoLink = document.createElement('a');
-
-	repoLink.href = repoData.url;
-	repoLink.textContent = repoData.full_name;
-    repoLink.target = "_blank";
-	h2title.appendChild(repoLink);
-
-	return h2title;
+	// <h3>Titulo del repositorio</h3>
+	const title = document.createElement('h2');
+	title.textContent = repoData.full_name;
+	return title;
 }
 
 function createRepoHr() {
@@ -77,77 +77,65 @@ function createRepoHr() {
 }
 
 function createRepoDescription(repoData) {
-	const span = document.createElement('span');
-	span.textContent = "\"" + (repoData.description ?? "No hay descripcion") + "\"";
-
-    span.appendChild(createBr());
-    span.appendChild(createRepoLangs(repoData));
-	return span;
-}
-
-function createRepoLangs(repoData) {
-    const span = document.createElement('span');
-    span.textContent = ' ' + repoData.topics.map(topic => {
-        return '#' + topic;
-    }).join(', ');
-
-    const spanIcon = document.createElement('span');
-    spanIcon.className = "fa-brands fa-" + getIcon(repoData.language);
-
-    span.appendChild(spanIcon);
-    return span;
-}
-
-function createBr() {
-    return document.createElement('br');
+	const paragraph = document.createElement('p');
+	paragraph.textContent = (repoData.description ?? "\"No hay descripcion\"");
+	return paragraph;
 }
 
 function createRepoStats(repoData) {
-    const div = document.createElement('span');
-    div.style = "display: inline-block";
+    const paragraph = document.createElement('p');
+    paragraph.className = "just-content";
     // starts
-    div.appendChild(getStartIcon());
-    div.appendChild(document.createTextNode(repoData.starts + ' - '));
+    paragraph.appendChild(getStart(repoData.starts));
     // forks
-    div.appendChild(getForkIcon());
-    div.appendChild(document.createTextNode(repoData.forks + ' - '));
+    paragraph.appendChild(getFork(repoData.forks));
     // watchers
-    div.appendChild(getWatcherIcon());
-    div.appendChild(document.createTextNode(repoData.watchers));
-    return div;
+    paragraph.appendChild(getWatcher(repoData.watchers));
+    return paragraph;
 }
 
-function getStartIcon() {
-    const icon = document.createElement('img');
-	icon.src = "static/images/start.svg";
-	icon.width = "16";
-	icon.height = "16";
-    // icon.className = "fa-thin fa-star";
+function createRepoLink(repoData) {
+	const paragraph = document.createElement('p');
+	paragraph.className = "github-link";
 
-    return icon;
+	paragraph.appendChild(document.createTextNode("Ver en github: "));
+
+	const link = document.createElement('a');
+	link.href  = repoData.url;
+	link.textContent = repoData.full_name;
+
+	paragraph.appendChild(link);
+
+	return paragraph;
 }
 
-function getForkIcon() {
-    const icon = document.createElement('img');
-	icon.src = "static/images/git-fork.svg";
-	icon.width = "16";
-	icon.height = "16";
 
-    return icon;
+function getStart(starts) {
+    const span = document.createElement('span');
+    span.appendChild(getImgPath('start'));
+    span.appendChild(document.createTextNode(`Starts: ${starts}`));
+
+    return span;
 }
 
-function getWatcherIcon() {
-    const icon = document.createElement('img');
-	icon.src = "static/images/eye.svg";
-	icon.width = "16";
-	icon.height = "16";
+function getFork(forks) {
+	const span = document.createElement('span');
+    span.appendChild(getImgPath('git-fork'));
+    span.appendChild(document.createTextNode(`Forks: ${forks}`));
 
-    return icon;
+    return span;
 }
 
-function getIcon(language) {
-    if (language == "Go") {
-        return "golang";
-    }
-    return "php";
+function getWatcher(watchers) {
+	const span = document.createElement('span');
+    span.appendChild(getImgPath('eye'));
+    span.appendChild(document.createTextNode(`Watchers: ${watchers}`));
+
+    return span;
+}
+
+function getImgPath(path) {
+	const img = document.createElement('img');
+	img.src = `static/images/${path}.svg`;
+	return img;
 }
