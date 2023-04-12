@@ -1,14 +1,14 @@
 const githubUsername = 'Mateodioev';
-getUsernames(githubUsername)
-	.then(repos => {
-		console.log(repos);
+// getUsernames(githubUsername)
+// 	.then(repos => {
+// 		console.log(repos);
 
-		const repoList = document.getElementById('github-repos');
+// 		const repoList = document.getElementById('github-repos');
 
-		repos.forEach(repo => {
-			addRepo(repo, repoList);
-		});
-	});
+// 		repos.forEach(repo => {
+// 			addRepo(repo, repoList);
+// 		});
+// 	});
 
 async function getUsernames(username) {
 
