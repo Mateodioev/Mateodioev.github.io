@@ -54,6 +54,9 @@ function parseRepo(data) {
 	container.appendChild(createRepoHr());
 	container.appendChild(createRepoDescription(data));
 	container.appendChild(createRepoHr());
+	// add tags
+	container.appendChild(createRepoTags(data));
+	container.appendChild(createRepoHr());
 	container.appendChild(createRepoStats(data));
 	container.appendChild(createRepoHr());
 	container.appendChild(createRepoLink(data));
@@ -82,6 +85,19 @@ function createRepoDescription(repoData) {
 	return paragraph;
 }
 
+function createRepoTags(repoData) {
+	const ul = document.createElement('ul');
+	ul.className = "github-topics just-content";
+
+	repoData.topics.map(topic => {
+		var li = document.createElement('li');
+		li.textContent = `#${topic}`;
+		ul.appendChild(li);
+	});
+
+	return ul;
+}
+
 function createRepoStats(repoData) {
     const paragraph = document.createElement('p');
     paragraph.className = "just-content";
@@ -108,7 +124,6 @@ function createRepoLink(repoData) {
 
 	return paragraph;
 }
-
 
 function getStart(starts) {
     const span = document.createElement('span');
