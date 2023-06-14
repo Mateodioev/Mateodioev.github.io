@@ -26,7 +26,7 @@ header#title {
 	text-align: center;
 	padding: 10px;
 	font-family: 'Fira Code';
-	font-size: 30px;
+	font-size: 35px;
 	height: 50px;
 }
 
@@ -38,6 +38,7 @@ header#title {
 	display: inline-block;
 	font-weight: 700;
 	text-align: center;
+    font-size: 35px;
 }
 
 .skills {
@@ -46,7 +47,7 @@ header#title {
 	text-align:center;
 	padding: 7px;
 	font-weight: 550;
-	font-size: 20px;
+	font-size: 25px;
 }
 
 .skills > span {
@@ -58,7 +59,7 @@ header#title {
 }
 
 div.skills > span:hover {
-	font-size: 21px;
+	font-size: 30px;
 	background-color: #f3bf4e;
 }
 
@@ -101,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-decoration: underline;
 }
 
-h2 { font-size: large; }
+/* h2 { font-size: large; } */
 
 p { color: #afafaf; }
 
@@ -122,6 +123,7 @@ li { color: rgb(224, 217, 209); }
 	border: 1px solid #000;
 	border-radius:150px;
 	margin: auto;
+    width: 45%; /* Match with dev-description card */
 }
 
 /* oculta las secciones por defecto */
@@ -140,6 +142,7 @@ li { color: rgb(224, 217, 209); }
 	text-align: justify;
 	justify-content: center;
 	align-items: center;
+    font-size: 150%;
 }
 
 .github-card {
@@ -215,7 +218,7 @@ li { color: rgb(224, 217, 209); }
 .sidenav a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
-	font-size: 25px;
+	font-size: 30px;
 	color: #818181;
 	display: block;
 	transition: 0.3s;
@@ -230,7 +233,7 @@ li { color: rgb(224, 217, 209); }
 	position: absolute;
 	top: 0;
 	right: 25px;
-	font-size: 36px;
+	font-size: 50px;
 	margin-left: 50px;
 }
 
@@ -239,7 +242,7 @@ li { color: rgb(224, 217, 209); }
 }
 
 .openbtn {
-	font-size: 50px;
+	font-size: 70px;
 	cursor: pointer;
 	color: #9b9b9b;
 }
